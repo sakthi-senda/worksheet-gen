@@ -42,7 +42,7 @@ style.write(stye_code)
 style.close()
 
 # filename = path + "/" + "h.html"
-filename = path + "/" + "h.html"
+filename = path + "/" + "home.html"
 webbrowser.open_new_tab("http://localhost:63343/worksheet-gen/home.html?_ijt=rllnffpfdq8do1g4nss6h2p6da")
 
 # webbrowser.open('https://www.google.com/')
