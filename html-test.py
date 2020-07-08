@@ -3,7 +3,7 @@ import os
 path = os.path.dirname(os.path.abspath(__file__))
 print("current path " + path)
 
-fontSize = input("Font??")
+# fontSize = input("Font??")
 
 f = open('home.html', 'w')
 
@@ -28,7 +28,7 @@ src: url(quicksand/Quicksand_Dash.otf) format("opentype");
 body p{
     font-family: Quicksand;
     color: black;
-    font-size: 50px;"""
+    font-size: 70px;}"""
 
 
             
