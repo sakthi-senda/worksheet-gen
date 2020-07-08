@@ -9,9 +9,26 @@ f = open('home.html', 'w')
 
 style = open('style.css', 'w')
 
-message = """<html>
-<head><link rel="stylesheet" type="text/css" href="style.css"></head>
-<body><p>Hello World! Sakthi </p></body>
+html_code = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="sample_stylesheet.css">
+</head>
+<body>
+    <div class="title">
+        My name is Nidhi
+    </div>
+
+    <div class="lines">
+<ul>
+    <li>My name is Sakthi</li>
+    <li>My name is Nidhi</li>
+</ul>
+    </div>
+
+</body>
 </html>"""
 
 
@@ -28,14 +45,30 @@ src: url(quicksand/Quicksand_Dash.otf) format("opentype");
 body p{
     font-family: Quicksand;
     color: black;
-    font-size: 70px;}"""
+    font-size: 80px;}
+
+.lines{
+    font-family: Quicksand;
+    padding-top: 20px;
+    font-size: 50px;
+    opacity: 50%;
+}
+
+.title{
+    font-family: Quicksand;
+    opacity: 100%;
+    font-size: 60px;
+    text-align: center;
+
+}
+"""
 
 
             
             
 
 
-f.write(message)
+f.write(html_code)
 f.close()
 
 style.write(stye_code)
