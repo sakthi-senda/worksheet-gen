@@ -1,0 +1,14 @@
+
+@font-face {
+font-family: "Quicksand";
+src: url(quicksand/Quicksand_Dash.otf) format("opentype");
+}
+
+*{
+    size: A4;
+}
+
+body p{
+    font-family: Quicksand;
+    color: black;
+    font-size: 80px;
