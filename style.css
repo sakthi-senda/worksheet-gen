@@ -3,7 +3,10 @@
 font-family: "Quicksand";
 src: url(quicksand/Quicksand_Dash.otf) format("opentype");
 }
-
+@font-face {
+    font-family: Normal;
+    src: url(quicksand/Quicksand_Bold.otf) format("opentype");
+}
 *{
     size: A4;
 }
@@ -16,8 +19,23 @@ body p{
 .lines{
     font-family: Quicksand;
     padding-top: 20px;
-    font-size: 50px;
+    font-size: 100px;
     opacity: 50%;
+    list-style-type: none;
+    
+}
+
+
+.lines li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*removes the bullet points*/
+    list-style-type: none;
+    margin: 0;
+    text-decoration-line: underline;
+    text-decoration-opacity: 10%;
+
+
 }
 
 .title{
@@ -25,5 +43,6 @@ body p{
     opacity: 100%;
     font-size: 60px;
     text-align: center;
+    font-family: Normal;
 
 }

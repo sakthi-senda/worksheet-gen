@@ -4,26 +4,44 @@ font-family: "Quicksand";
 src: url(quicksand/Quicksand_Dash.otf) format("opentype");
 }
 
+@font-face {
+    font-family: "title";
+    src: url(quicksand/Quicksand_Bold.otf) format("opentype");
+}
+
 *{
     size: A4;
 }
 
 body p{
-    font-family: Quicksand;
+    font-family: Quicksand, sans-serif;
     color: black;
     font-size: 80px;}
 
 .lines{
-    font-family: Quicksand;
-    padding-top: 20px;
-    font-size: 50px;
-    opacity: 50%;
+    font-family: Quicksand, sans-serif;
+
+    font-size: 60px;
+    opacity: 40%;
+
+}
+.lines li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*removes the bullet points*/
+    list-style-type: none;
+    margin: 0;
+    text-decoration-line: underline;
+    text-decoration-opacity: 10%;
+
+
+
+
 }
 
 .title{
-    font-family: Quicksand;
     opacity: 100%;
     font-size: 60px;
     text-align: center;
-
+    font-family: title;
 }

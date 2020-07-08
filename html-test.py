@@ -9,22 +9,33 @@ f = open('home.html', 'w')
 
 style = open('style.css', 'w')
 
+line = input("Line: ")
+font_size  = input("font size: ")
+num_lines = int(input("Number of Lines: "))
+x = " "
+
+
+code = ""
+font_code = ""
+
+for i in range(num_lines):
+    code += (f'<li>{line}</li>'+ '\n\n')
+
+# test if printing correctly
+# print(code)
+
 html_code = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="sample_stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="title">
-        My name is Nidhi
-    </div>
+    <div class="title"> """ + line + """ </div>
 
     <div class="lines">
-<ul>
-    <li>My name is Sakthi</li>
-    <li>My name is Nidhi</li>
+<ul> """ + code + """
 </ul>
     </div>
 
@@ -37,7 +48,10 @@ stye_code = """
 font-family: "Quicksand";
 src: url(quicksand/Quicksand_Dash.otf) format("opentype");
 }
-
+@font-face {
+    font-family: Normal;
+    src: url(quicksand/Quicksand_Bold.otf) format("opentype");
+}
 *{
     size: A4;
 }
@@ -50,8 +64,23 @@ body p{
 .lines{
     font-family: Quicksand;
     padding-top: 20px;
-    font-size: 50px;
+    font-size: """+  font_size +"""px;
     opacity: 50%;
+    list-style-type: none;
+    
+}
+
+
+.lines li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*removes the bullet points*/
+    list-style-type: none;
+    margin: 0;
+    text-decoration-line: underline;
+    text-decoration-opacity: 10%;
+
+
 }
 
 .title{
@@ -59,13 +88,10 @@ body p{
     opacity: 100%;
     font-size: 60px;
     text-align: center;
+    font-family: Normal;
 
 }
 """
-
-
-            
-            
 
 
 f.write(html_code)
