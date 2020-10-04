@@ -5,14 +5,13 @@ print("current path " + path)
 
 # fontSize = input("Font??")
 
-f = open('home.html', 'w')
+html_file = open('home.html', 'w')
 
-style = open('style.css', 'w')
+style_file = open('style.css', 'w')
 
 line = input("Line: ")
-font_size  = input("font size: ")
+font_size = input("font size: ")
 num_lines = int(input("Number of Lines: "))
-x = " "
 
 
 code = ""
@@ -24,18 +23,18 @@ for i in range(num_lines):
 # test if printing correctly
 # print(code)
 
-html_code = """<!DOCTYPE html>
+html_code = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> </title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="title"> """ + line + """ </div>
+    <div class="title">   {line}  </div>
 
     <div class="lines">
-<ul> """ + code + """
+<ul> {code}
 </ul>
     </div>
 
@@ -43,35 +42,35 @@ html_code = """<!DOCTYPE html>
 </html>"""
 
 
-stye_code = """
-@font-face {
+style_code = f"""
+@font-face {{
 font-family: "Quicksand";
 src: url(quicksand/Quicksand_Dash.otf) format("opentype");
-}
-@font-face {
+}}
+@font-face {{
     font-family: Normal;
     src: url(quicksand/Quicksand_Bold.otf) format("opentype");
-}
-*{
+}}
+*{{
     size: A4;
-}
+}}
 
-body p{
+body p{{
     font-family: Quicksand;
     color: black;
-    font-size: 80px;}
+    font-size: 80px;}}
 
-.lines{
+.lines{{
     font-family: Quicksand;
     padding-top: 20px;
-    font-size: """+  font_size +"""px;
+    font-size: {font_size}px;
     opacity: 50%;
     list-style-type: none;
     
-}
+}}
 
 
-.lines li{
+.lines li{{
     padding-top: 10px;
     padding-bottom: 10px;
     /*removes the bullet points*/
@@ -81,27 +80,31 @@ body p{
     text-decoration-opacity: 10%;
 
 
-}
+}}
 
-.title{
+.title{{
     font-family: Quicksand;
     opacity: 100%;
     font-size: 60px;
     text-align: center;
     font-family: Normal;
 
-}
+}}
 """
 
+# Write and close HTML code in the HTML file
+html_file.write(html_code)
+html_file.close()
 
-f.write(html_code)
-f.close()
 
-style.write(stye_code)
-style.close()
+#Write and close CSS code in the CSS file
+style_file.write(style_code)
+style_file.close()
 
 # filename = path + "/" + "h.html"
 filename = path + "/" + "home.html"
-webbrowser.open_new_tab("http://localhost:63343/worksheet-gen/home.html?_ijt=rllnffpfdq8do1g4nss6h2p6da")
+webbrowser.open_new_tab("http://localhost:63342/worksheet-gen/home.html?_ijt=1dviav5g0p79bhucceoq1397mv")
 
 # webbrowser.open('https://www.google.com/')
+
+
